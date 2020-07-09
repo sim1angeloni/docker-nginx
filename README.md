@@ -1,15 +1,28 @@
-# nginx-dev
+A Dockerfile to build a fully set-up development environment for nginx and its modules. Use it for your development process with nginx (developing, building and testing nginx source or its modules).
 
-A Dockerfile that builds a development environment for nginx.
+The following platforms are supported (see [branches](https://github.com/sineang01/nginx-docker/branches)):
+* [Ubuntu 18.04 LTS](https://github.com/sineang01/nginx-docker/tree/ubuntu-18.04)
+* [Ubuntu 20.04 LTS](https://github.com/sineang01/nginx-docker/tree/ubuntu-20.04)
 
-## Getting Started
+Each branch contains the Dockerfile for the related platform.
 
-Build the docker image with:
+# Getting Started
+
+## Build your image
+
+1. Download your preferred branch from GitHub
+```
+git clone -b ubuntu-20.04 git@github.com:sineang01/nginx-docker.git
+```
+
+2. Build the Docker image with
 ```
 docker build .
 ```
 
-You can then run the docker container and use it to compile nginx or its modules, for example:
+3. Run the container
+
+4. (Optional) Download nginx from the website and run the following commands to compile:
 ```
 wget https://nginx.org/download/nginx-1.14.0.tar.gz
 tar zxvf nginx-1.14.0.tar.gz && cd nginx-1.14.0
@@ -17,15 +30,35 @@ tar zxvf nginx-1.14.0.tar.gz && cd nginx-1.14.0
 make
 ```
 
-If you want to use a prebuilt docker image, download it [here](https://github.com/sineang01/nginx-dev/packages/216485)
+## Full prebuilt images Listing
+
+| Image name | Tag | Dockerfile | Last Modified |
+| ---------- | --- | ---------- | ------------- |
+| sineang01/nginx | ubuntu-18.04 | [Dockerfile](https://github.com/sineang01/nginx-docker/blob/ubuntu-18.04/Dockerfile) | 09/07/2020 |
+| sineang01/nginx | ubuntu-20.04 | [Dockerfile](https://github.com/sineang01/nginx-docker/blob/ubuntu-20.04/Dockerfile) | 09/07/2020 |
+
+The prebuilt images do **not** include nginx, so the developer can choose which version to install or compile.
+
+All the images are uploaded to Docker HUB. See the [repository](https://hub.docker.com/r/sineang01/nginx).
+
+### How to Use the Images
+
+1. Pull the image (choose your preferred tag)
 ```
-docker pull docker.pkg.github.com/sineang01/nginx-dev/nginx-dev:1.0
+docker pull sineang01/nginx:ubuntu-20.04
 ```
 
-## Authors
+2. Run the container
+
+# Feedback
+
+- [File an issue or report a problem](https://github.com/sineang01/nginx-docker/issues/new)
+- [Ask on Stack Overflow](https://stackoverflow.com/questions/tagged/nginx)
+
+# Authors
 
 * **Simone Angeloni** - *Initial work* - [@sineang01](https://github.com/sineang01)
 
-## License
+# License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
