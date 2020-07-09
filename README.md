@@ -41,7 +41,7 @@ The prebuilt images do **not** include nginx, so the developer can choose which 
 
 All the images are uploaded to Docker HUB. See the [repository](https://hub.docker.com/r/sineang01/nginx).
 
-### How to Use the Image
+### How to Use the Images
 
 1. Pull the image (choose your preferred tag)
 ```
