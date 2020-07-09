@@ -1,15 +1,23 @@
-# nginx-dev
+# nginx-docker
 
-A Dockerfile that builds a development environment for nginx.
+A Dockerfile to build a development environment for nginx and its modules.
+
+Supports the following platforms (see [branches](https://github.com/sineang01/nginx-docker/branches)):
+* Ubuntu 18.04 LTS
+* Ubuntu 20.04 LTS
 
 ## Getting Started
 
-Build the docker image with:
+### Build your image
+
+1. Download your preferred branch from GitHub
+
+2. Build the docker image with:
 ```
 docker build .
 ```
 
-You can then run the docker container and use it to compile nginx or its modules, for example:
+3. Run the docker container and use it to compile nginx or one of its modules, for example:
 ```
 wget https://nginx.org/download/nginx-1.14.0.tar.gz
 tar zxvf nginx-1.14.0.tar.gz && cd nginx-1.14.0
@@ -17,9 +25,13 @@ tar zxvf nginx-1.14.0.tar.gz && cd nginx-1.14.0
 make
 ```
 
-If you want to use a prebuilt docker image, download it [here](https://github.com/sineang01/nginx-dev/packages/216485)
+### Prebuilt images
+
+Find prebuilt images [here](https://hub.docker.com/r/sineang01/nginx).
+
+Pull the preferred image with:
 ```
-docker pull docker.pkg.github.com/sineang01/nginx-dev/nginx-dev:1.0
+docker pull sineang01/nginx:ubuntu-20.04
 ```
 
 ## Authors
